@@ -1,5 +1,7 @@
 var textbox = document.getElementById('textbox');
 var label = document.getElementById('label');
+var tweetbutton = document.getElementById('tweetbutton');
+tweetbutton.style.visibility='hidden';
 
 textbox.focus();
 
@@ -137,8 +139,14 @@ function end()
         var spd = len / time * 1000;
         label.innerHTML += spd.toFixed(2) + 'chars/s' + '<br>';
         label.innerHTML += 'miss:' + miss + '<br>';
-        label.innerHTML += '<strong>score:' + (spd * 20 - miss / len * 20).toFixed(2) + '</strong><br>';
+        var pts=(spd * 20 - miss / len * 20).toFixed(2);
+        label.innerHTML += '<strong>score:' + pts + '</strong><br>';
         label.innerHTML += 'SPACEで再挑戦';
         state = 3;
+
+        tweetbutton.style.visibility='visible';
+        tweetbutton.onclick=function(e){
+            window.open("http://twitter.com/share?url=https://ebiyuu1121.github.io/typing&text=私のスコアは"+pts+"点でした！&hashtags=#ロシア語タイピング");
+        }
     }
 }
