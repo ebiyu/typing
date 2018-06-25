@@ -48,7 +48,7 @@ function text_update(e)
 {
     switch (state) {
     case 1:
-        if (textbox.value == ' ') {
+        if (textbox.value == 'я') {
             start();
             redraw(done,'', rest);
         }
@@ -91,7 +91,7 @@ function redraw(ac ='', wa ='', normal ='')
         label.innerHTML = '問題数を入力してEnterを押してください。';
         break;
     case 1:
-        label.innerHTML = 'PRESS SPACE TO START';
+        label.innerHTML = '入力をロシア語に変更して"я"を押してスタート';
         break;
     case 2:
         label.innerHTML = '<font class="AC">' + ac + '</font><font class="WA">' + wa.replace(' ', '␣') + '</font>' + normal.replace(' ', '␣');
