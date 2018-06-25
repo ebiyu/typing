@@ -34,6 +34,7 @@ textbox.onkeypress = function(e)
             window.alert(questions.length + '以下で指定してね！');
         } else {
             n = Number(textbox.value);
+            textbox.value ='';
             init();
         }
     }
