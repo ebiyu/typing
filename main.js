@@ -69,6 +69,12 @@ function text_update(e)
             miss += 1;
         }
         break;
+    case 3:
+        if (textbox.value == ' ') {
+            state=0;
+            redraw();
+        }
+        break;
     }
     textbox.value ='';
 };
@@ -128,7 +134,8 @@ function end()
         var spd = len / time * 1000;
         label.innerHTML += spd.toFixed(2) + 'chars/s' + '<br>';
         label.innerHTML += 'miss:' + miss + '<br>';
-        label.innerHTML += '<strong>score:' + (spd * 20 - miss / len * 20).toFixed(2) + '</strong>';
+        label.innerHTML += '<strong>score:' + (spd * 20 - miss / len * 20).toFixed(2) + '</strong><br>';
+        label.innerHTML += 'SPACEで再挑戦';
         state = 3;
     }
 }
