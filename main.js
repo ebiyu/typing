@@ -147,7 +147,7 @@ function end()
 
         tweetbutton.style.visibility='visible';
         tweetbutton.onclick=function(e){
-            window.open("http://twitter.com/share?url=https://ebiyuu1121.github.io/typing&text="+n+"問解いて，私のスコアは"+pts+"点でした！&hashtags=#ロシア語タイピング");
+            window.open("http://twitter.com/share?url=https://ebiyuu1121.github.io/typing&text="+n+"問解いて，私のスコアは"+pts+"点でした！#ロシア語タイピング");
         }
     }
 }
