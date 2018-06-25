@@ -77,6 +77,7 @@ function text_update(e)
     case 3:
         if (textbox.value == ' ') {
             state=0;
+            textbox.oninput = function(e){};
             redraw();
         }
         break;
@@ -146,7 +147,7 @@ function end()
 
         tweetbutton.style.visibility='visible';
         tweetbutton.onclick=function(e){
-            window.open("http://twitter.com/share?url=https://ebiyuu1121.github.io/typing&text=私のスコアは"+pts+"点でした！&hashtags=#ロシア語タイピング");
+            window.open("http://twitter.com/share?url=https://ebiyuu1121.github.io/typing&text="+n+"問解いて，私のスコアは"+pts+"点でした！&hashtags=#ロシア語タイピング");
         }
     }
 }
