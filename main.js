@@ -32,6 +32,9 @@ textbox.onkeypress = function(e)
         } else if (Number(textbox.value) > questions.length) {
             textbox.value ='';
             window.alert(questions.length + '以下で指定してね！');
+        } else if (Number(textbox.value) <= 0) {
+            textbox.value ='';
+            window.alert('正の数で指定してね！');
         } else {
             n = Number(textbox.value);
             textbox.value ='';
